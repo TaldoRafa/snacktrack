@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql
+    container_name: snack_track
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3304:3306"
+    volumes:
+      - snack_track_data:/var/lib/snack_track
+
+volumes:
+  snack_track_data:
